@@ -1,0 +1,91 @@
+---
+title: "Assignment5"
+Author: Meghana
+---
+
+```{r}
+# Install the easypackages package 
+## install.packages(c("easypackages","XML","wordcloud","RColorBrewer","NLP","tm","quanteda","quanteda.textstats"))
+library(easypackages)
+libraries("XML","wordcloud","RColorBrewer","NLP","tm","quanteda","quanteda.textstats")
+```
+
+```{r}
+# Download text data from website
+churchill_speech <-URLencode("http://www.historyplace.com/speeches/churchill-hour.htm")
+```
+
+```{r}
+
+# use htmlTreeParse function to read and parse paragraphs
+
+doc.html<- htmlTreeParse(churchill_speech, useInternal=TRUE)
+churchill <- unlist(xpathApply(doc.html, '//p', xmlValue))
+```
+
+```{r}
+head(churchill, 3)
+
+words.vec <- VectorSource(churchill)
+```
+
+```{r}
+# Check the class of words.vec
+
+class(words.vec)
+```
+
+```{r}
+# Create Corpus object for preprocessing
+words.corpus <- Corpus(words.vec)
+inspect(words.corpus)
+```
+
+```{r}
+# Turn all words to lower case
+
+words.corpus <- tm_map(words.corpus, content_transformer(tolower))
+```
+
+```{r}
+# Remove punctuations, numbers
+words.corpus <- tm_map(words.corpus, removePunctuation)
+words.corpus <- tm_map(words.corpus, removeNumbers)
+```
+
+```{r}
+# How about stopwords, then uniform bag of words created
+#install.packages("ISOcodes")
+library(ISOcodes)
+words.corpus <- tm_map(words.corpus, removeWords, stopwords("english"))
+```
+
+```{r}
+# Create Term Document Matric
+
+tdm <- TermDocumentMatrix(words.corpus)
+inspect(tdm)
+```
+
+```{r}
+m <- as.matrix(tdm)
+wordCounts <- rowSums(m)
+wordCounts <- sort(wordCounts, decreasing=TRUE)
+head(wordCounts)
+```
+
+```{r}
+# Create Wordcloud
+cloudFrame<-data.frame(word=names(wordCounts),freq=wordCounts)
+```
+
+```{r}
+set.seed(1234)
+wordcloud(cloudFrame$word,cloudFrame$freq)
+wordcloud(names(wordCounts),wordCounts, min.freq=1,random.order=FALSE, max.words=200,scale=c(4,.5), rot.per=0.35,colors=brewer.pal(8,"Dark2"))
+```
+
+```{r}
+#  N-gram with two to three words
+textstat_collocations(churchill, size = 2:3) 
+```

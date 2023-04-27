@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: "Meghana Koduru"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About me
+      - text: Assignments
+        menu: 
+          - assignment1.qmd
+          - assignment2.qmd
+          - assignment3.qmd
+          - assignment5.qmd
+          - assignment6.qmd
+          - assignment7.qmd
+          - assignment8.qmd
+
+format:
+  html:
+    theme: united
+    css: styles.css
+    toc: true
+
+editor: visual
+

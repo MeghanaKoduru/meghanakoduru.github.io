@@ -1,0 +1,17 @@
+---
+title: "Meghana Koduru"
+about: 
+  template: trestles
+---
+
+### More about me:
+
+Meghana is a Graduate student at University of Texas, Dallas. Aside from hobbies, Meghana loves to build her skills. As of now, she is building her skills in R, python and SQL. Currently, she is applying for internships in the Data Analytics field.
+
+Please free to contact me if you need more information.
+
+Email Address: meghana.koduru\@hotmail.com
+
+UTD email: mxk210143\@utdallas.edu
+
+Phone Number: 425-420-3606
