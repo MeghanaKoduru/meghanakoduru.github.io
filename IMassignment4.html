@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Meghana">
 
-<title>Meghana Koduru - Assignment 1</title>
+<title>Meghana Koduru - IMassignment4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -178,19 +177,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 1</h1>
+<h1 class="title">IMassignment4</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Meghana </p>
-          </div>
-  </div>
     
   
     
@@ -199,28 +192,20 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><u><strong>Proposed Hypothesis</strong></u></p>
-<p>There is a correlation between volume of threatening events and the local weather in terms of temperature and amount of precipitation.</p>
-<p><u><strong>How data can be collected ?</strong></u></p>
+<p>Explain the difference between a weak and strong entity set. Use an example other than the one in Chapter 6 to illustrate.</p>
+<p>A strong entity set is an entity that is not dependent on any other entity. It has primary key, or a table that includes a primary key. On the other hand, a weak entity is not independent as it is reliant on another strong entity. It must relay on other entities to ensure its existence. For example, in a college database, the entities can be Professor_Address and Professor_Salary are attributes. Professor_ID is the primary key. Professor is a strong entity set here since it has a primary key Professor_ID.</p>
+<p>Professor_Dependent is the weak entity.</p>
 <ol type="1">
-<li><p>Download data from GDELT based on event code and a selected state for the past 5 years.</p></li>
-<li><p>Download historical weather data reading for the selected in the past 5 years. Possible source is ncei.noaa.gov/cdo-web</p>
-<p><u><strong>What methods could be considered?</strong></u></p>
-<ol type="1">
-<li><p>Scatter plots to check for correlation between independent variables (IV) and dependent variables (DV)</p></li>
-<li><p>Scatter plots to check for correlation between the IVs</p></li>
-<li><p>Use R multiple linear regression functions</p></li>
-<li><p>Use R model validation functions to test the model</p>
-<p><u><strong>How to start the data project?</strong></u></p>
-<ol type="1">
-<li><p>Define the data sampling parameters, such as number of years to collect events and weather data and for which US state.</p></li>
-<li><p>Go to GDELT website to download required data collection</p></li>
-<li><p>Do the data cleaning if needed</p></li>
-<li><p>Join data together based on date and location</p></li>
-<li><p>Divide data into training and testing data set.</p></li>
-<li><p>Use scatter plotting for visual inspection</p></li>
-</ol></li>
-</ol></li>
+<li><p>ER Diagram</p></li>
+<li><p>a. Explain why appending natural join section in the form clause would not change the result. (Consult Ch.4, 4.13)</p>
+<p>The table “takes” and “student” are utilized in the provided SQL query, and they are coupled together via a natural join. The natural join will not use comparision operators and will not concatenate similar to cartesian product. So, appending natuaral join section in the form clause would not change the result.</p>
+<p>b. Write an SQL query using the university schema to find ID each student who has never taken a course at the university. Do this by using no subqueries and not set operations (use an outer join).</p>
+<p>(Consult Ch.4, 4.1.3)</p>
+<p>SELECT s.id</p>
+<p>FROM student s</p>
+<p>LEFT JOINS takes t</p>
+<p>ON s.id = t.id</p>
+<p>WHERE course_id IS NULL</p></li>
 </ol>
 
 
