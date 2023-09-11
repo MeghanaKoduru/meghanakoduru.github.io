@@ -11,6 +11,13 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "About this site\nHi, my name is Meghana Koduru. I am pursuing masters in Social Data Analytics and Research at the University of Texas, Dallas. As of now, she is building her skills in R, python and SQL. Currently, she is applying for internships in the Data Analytics field. If you have any questions or want to contact me, please feel free to do so.\nEmail Address: meghana.koduru@hotmail.com\nUTD email: mxk210143@utdallas.edu"
+  },
+  {
+    "objectID": "Assignment1.html",
+    "href": "Assignment1.html",
+    "title": "Assignment1",
+    "section": "",
+    "text": "The Survey can be found here: https://utdallas.qualtrics.com/jfe/form/SV_3axymx5ih3hjuD4\nAnalyze the survey:\na. How is the survey structured?\nThis survey is broken down into multiple sections. It starts with a welcome message and then moves into a single set for all the questions. The questions are mixed and could be re-arranged better to stick to one theme for a set of questions. A section for each type of question would make the navigation better. Also, the choices for the multiple-choice are not listed in uniform fashion, either horizontally or vertically. The aesthetics of the survey can be better.\nb. What is the questionnaire composed of?\nThis questionnaire is a part of pre-market survey to measure interest in a software that helps moderate content on a subscriber’s account. The survey is trying to find the price point for such a software and is also trying to capture behavior of its prospective customers like online purchases, quantity of content consumed, type of hardware to access content.\nc. How are the questions ordered?\nThe first section mainly asks about the kind of content the audience prefers. Secondly, the questions are focused on the software that the surveyor is trying to bring to the market. The survey ends with demographic demographic questions.\n\nWhat can be done to improve respondent’s experience.\nThe listing of Multiple-choice questions can be standardized. Questions 2,5, and 6 are not mobile friendly. The matrix table may be a difficult option to get responses can be replaced by a simpler set of multiple-choice questions.\nFurther Assignment: Importing a survey from Qualtrics library.\nWhat is the difference between this block and previous instrument?\nThe main difference is that the Diversity and Inclusiveness survey is mostly about gender and inclusiveness in terms of their role as well as the workplace culture. The two questions about income and education are pure demographic questions to capture social identifiers of the respondent.\nhttps://utdallas.qualtrics.com/jfe/form/SV_cBgqvTkf9tbWA2W"
   }
 ]
